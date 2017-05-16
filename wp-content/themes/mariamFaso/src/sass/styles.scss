@@ -1,0 +1,72 @@
+/************/
+
+
+/***IMPORT***/
+
+
+/************/
+
+
+/****normalize****/
+
+@import 'normalize/reset';
+
+/****tools***/
+
+@import 'tools/buttons';
+@import 'tools/baseline';
+@import 'tools/gallery';
+
+/****settings***/
+
+@import 'settings/colors';
+@import 'settings/fontFace';
+@import 'settings/global';
+
+/****base****/
+
+@import 'base/headings';
+@import 'base/links';
+@import 'base/forms';
+
+/****components****/
+
+//@import 'components/pageFooter';
+@import 'components/pageHeader';
+//@import 'components/pageContact';
+@import 'components/widget';
+@import 'components/menuDropDown';
+@import 'components/paralaxNavigation';
+@import 'components/teamEffect';
+@import 'components/ajaxNavigation';
+@import 'components/sidebar';
+body {
+    font-family: 'JosefinSans-Regular';
+    color: #000;
+}
+
+
+/*****responsive****/
+
+@import 'responsive/home';
+@import 'responsive/project';
+@import 'responsive/event';
+@import 'responsive/travel';
+@import 'responsive/don';
+@import 'responsive/agenda';
+@import 'responsive/contact';
+
+/****pages****/
+
+@import 'pages/home';
+@import 'pages/dons';
+@import 'pages/project';
+@import 'pages/contact';
+@import 'pages/travel';
+@import 'pages/press';
+@import 'pages/faq';
+
+/****trumps****/
+
+@import 'trumps/hideText';
+@import 'trumps/responsive';

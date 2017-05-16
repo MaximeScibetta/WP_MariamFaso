@@ -1,0 +1,41 @@
+@media (min-width: 320px) {
+    html {
+        font-size: 59%;
+    }
+}
+
+@media(min-width:500px) {
+    html {
+        font-size: 70%;
+    }
+    header button {
+        margin-top: 5px;
+    }
+}
+
+@media(min-width: 800px) {
+    html {
+        font-size: 80%;
+    }
+    header button {
+        margin-top: 10px;
+    }
+}
+
+@media(min-width: 1200px) {
+    html {
+        font-size: 90%;
+    }
+    header button {
+        margin-top: 15px;
+    }
+}
+
+@media(min-width: 1500px) {
+    html {
+        font-size: 100%;
+    }
+    header button {
+        margin-top: 20px;
+    }
+}

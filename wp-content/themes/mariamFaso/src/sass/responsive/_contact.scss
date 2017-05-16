@@ -1,0 +1,591 @@
+// // Grid
+// @mixin grid($column) {
+//     width: (100% / 12) * $column;
+//     margin: 0 auto;
+// }
+// section.contact {
+//     color: #000;
+// }
+// // Transition Ease
+// @mixin ease($time:333ms, $attr:all, $curve:ease-in-out) {
+//     -webkit-transition: $attr $time $curve;
+//     -moz-transition: $attr $time $curve;
+//     -o-transition: $attr $time $curve;
+//     -ms-transition: $attr $time $curve;
+//     transition: $attr $time $curve;
+// }
+// @media (min-width: 320px) {
+//     // Colors
+//     $blue: #313A3D;
+//     $orange: #FD9638;
+//     $dark-orange: darken($orange, 20%);
+//     $grey: #FFF;
+//     $light-grey: lighten($grey, 15%);
+//     $background: #FFF;
+//     $field-color: grey;
+//     body.contact {
+//         background: $background;
+//         //font-size: 62.5%;
+//         //@include lato-3;
+//         color: $grey;
+//         section {
+//             //margin: 0 2% 3em 5%;
+//             //padding-top: 5em;
+//             //background: white;
+//             //margin: 60px auto 120px;
+//             //border-top: 15px solid $blue;
+//             //text-align: center;
+//             //padding: 50px 0 110px;
+//             //width: 90%;
+//             //max-width: 1100px;
+//             h1 {
+//                 margin-bottom: 40px;
+//                 font-size: 4em;
+//                 text-transform: uppercase;
+//                 //@include lato-1;
+//             }
+//         }
+//     }
+//     // Form
+//     form {
+//         color: #FFF;
+//         width: 90%;
+//         margin: 0 auto;
+//         .field {
+//             width: 100%;
+//             position: relative;
+//             margin-bottom: 15px;
+//             $hover-label-width: 40%;
+//             $placeholder-bumper: 1.5%;
+//             $label-padding: 18px;
+//             // Label
+//             label {
+//                 text-transform: uppercase;
+//                 position: absolute;
+//                 top: 0;
+//                 left: 0;
+//                 background: $blue;
+//                 width: 100%;
+//                 padding: ($label-padding + 0px) 0;
+//                 font-size: 1.45em;
+//                 letter-spacing: 0.075em;
+//                 @include ease(333ms);
+//                 // Checkmark
+//                 +span {
+//                     opacity: 0;
+//                     color: #FFF;
+//                     display: block;
+//                     position: absolute;
+//                     top: 12px;
+//                     left: 12%;
+//                     font-size: 2em;
+//                     text-align: center;
+//                     margin: 0 auto;
+//                     text-transform: uppercase;
+//                     @include ease(333ms);
+//                     &.ss-msg {
+//                         left: 7%;
+//                     }
+//                 }
+//             }
+//             // Fields
+//             input[type="text"],
+//             textarea {
+//                 height: 18px;
+//                 border: none;
+//                 background: $field-color;
+//                 width: 100% - $hover-label-width - $placeholder-bumper;
+//                 margin: 0;
+//                 padding: $label-padding 0;
+//                 padding-left: $hover-label-width + $placeholder-bumper;
+//                 color: #000;
+//                 font-size: 1.2em;
+//                 letter-spacing: 0.05em;
+//                 //text-transform: uppercase;
+//                 &#msg {
+//                     // height: 20px;
+//                     resize: none;
+//                     @include ease(333ms);
+//                 }
+//                 // Focus and JS Toggle Class
+//                 &:focus,
+//                 &.focused {
+//                     outline: none;
+//                     &#msg {
+//                         padding-bottom: 150px;
+//                     }
+//                     +label {
+//                         width: $hover-label-width;
+//                         background: $orange;
+//                         color: $blue;
+//                     }
+//                 }
+//                 // JS Toggle Class
+//                 &.focused {
+//                     +label {
+//                         color: $orange;
+//                     }
+//                 }
+//             }
+//             // Field Hover
+//             &:hover {
+//                 label {
+//                     width: $hover-label-width;
+//                     background: $blue;
+//                     color: white;
+//                 }
+//             }
+//         }
+//         // Submit Button
+//         input[type="submit"] {
+//             background: $orange;
+//             color: white;
+//             -webkit-appearance: none;
+//             border: none;
+//             text-transform: uppercase;
+//             position: relative;
+//             padding: 13px 50px;
+//             font-size: 1.4em;
+//             letter-spacing: 0.1em;
+//             //@include lato-3;
+//             @include ease;
+//             &:hover {
+//                 background: $blue;
+//                 color: $orange;
+//             }
+//             &:focus {
+//                 outline: none;
+//                 background: $dark-orange;
+//             }
+//         }
+//     }
+// }
+body.contact {
+    background-color: $yellow;
+    h1 {
+        padding-top: 100px;
+        text-align: center;
+    }
+    .form {
+        position: relative;
+        width: 60%;
+        margin: 0 auto;
+         :before,
+         :after {
+            content: " ";
+            display: table;
+        }
+         :after {
+            clear: both;
+        }
+        label {
+            display: block;
+            padding: 40px 5px 5px 2px;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        input,
+        textarea,
+        select {
+            font-family: 'Lato', Calibri, Arial, sans-serif;
+            line-height: 1.5;
+            font-size: 1.4em;
+            padding: 5px 10px;
+            color: #000;
+            display: block;
+            width: 100%;
+            background: transparent;
+            border: none;
+        }
+        input,
+        textarea {
+            border-bottom: 3px solid $blue;
+        }
+        textarea {
+            min-height: 200px;
+        }
+        input:focus,
+        textarea:focus,
+        label:active+input,
+        label:active+textarea {
+            outline: none;
+            border-bottom: 3px solid #10689a;
+        }
+    }
+}
+
+.form input#submit {
+    background: #10689a;
+    border: none;
+    color: #fff;
+    width: auto;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border-radius: 2px;
+    letter-spacing: 1px;
+    border: 3px solid $blue;
+}
+
+.form input.submit:hover {
+    background: #1478b1;
+}
+
+@media screen and (max-width: 70em) {
+    .form_col {
+        width: 50%;
+    }
+    .form_col:nth-child(3) {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 48em) {
+    .form_col {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+
+/*FORM***/
+
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #10689a;
+    font-style: italic;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #10689a;
+    font-style: italic;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #10689a;
+    font-style: italic;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #10689a;
+    font-style: italic;
+}
+
+.submit_wrap {
+    text-align: center;
+    padding-top: 40px;
+    clear: both;
+}
+
+
+/****widget****/
+
+@media (min-width:1500px) {
+    .widget {
+        background-color: $yellow;
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            //justify-content: center;
+            .head {
+                padding: 100px 0 0 0;
+                //flex-basis: 120px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                /*align la head_bar*/
+                justify-content: center;
+                /*align le text dans son container*/
+                align-items: center;
+                &__item {
+                    border-radius: 30px 30px 0 0;
+                    padding: 30px 0;
+                    align-self: flex-end;
+                    flex-basis: 15%;
+                    display: flex;
+                    flex-direction: column;
+                    background-color: $yellow;
+                    color: #000;
+                    text-align: center;
+                    //text-transform: uppercase;
+                    margin-right: 20px;
+                    &--active {
+                        background-color: $red;
+                        color: #000;
+                    }
+                    span {
+                        font-family: 'JosefinSans-Regular';
+                        font-size: 1.5em;
+                        flex-basis: 50%;
+                    }
+                    .icon-1,
+                    .icon-2,
+                    .icon-3,
+                    .icon-4,
+                    .icon-5,
+                    .icon-6 {
+                        //flex-basis: 100%;
+                        width: 50px;
+                        height: 50px;
+                        text-align: center;
+                        // font-size: 50px;
+                        margin: 0 auto;
+                        margin-top: 30px;
+                    }
+                }
+            }
+            .content {
+                flex-basis: 20%;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                padding-bottom: 50px;
+                &__item {
+                    display: flex;
+                    flex-direction: row;
+                    &__head {
+                        flex-basis: 30%;
+                        background-color: #FFF;
+                        border-radius: 50px 0px 0 0;
+                        border-right: 1px solid #000;
+                        h3 {
+                            font-size: 3.0625rem;
+                            line-height: 5.59375rem;
+                            text-align: initial;
+                            margin-top: 30px;
+                            margin-left: 5%;
+                            text-transform: uppercase;
+                        }
+                        p {
+                            padding-bottom: 50px;
+                            width: 80%;
+                            margin: 1em auto 1em;
+                        }
+                    }
+                    &__content {
+                        //border-top: 5px solid #fff;
+                        flex-basis: 70%;
+                        background-color: #fff;
+                        border-radius: 0 50px 0 0;
+                        position: relative;
+                        p {
+                            max-width: 700px;
+                            margin: 2em auto 2em 40%;
+                        }
+                        img {
+                            width: 30%;
+                            display: inline-flex;
+                            position: absolute;
+                            top: 3.5em;
+                            left: 5%;
+                        }
+                        .btn {
+                            color: #000;
+                            font-family: 'JosefinSans-Regular';
+                            @include button(1.5em 13.7%, #000, $yellow, 5px);
+                            //width: 2%;
+                            text-transform: uppercase;
+                            margin-left: 0;
+                            //margin-top: $spacing-unit;
+                            display: inline-block;
+                            letter-spacing: 1px;
+                            position: absolute;
+                            top: 22em;
+                            left: 5%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1500px) {
+    .widget {
+        background-color: $yellow;
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            //justify-content: center;
+            .head {
+                padding: 100px 0 0 0;
+                //flex-basis: 120px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                /*align la head_bar*/
+                justify-content: center;
+                /*align le text dans son container*/
+                align-items: center;
+                &__item {
+                    border-radius: 30px;
+                    padding: 30px 0;
+                    align-self: flex-end;
+                    flex-basis: 100%;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    background-color: $yellow;
+                    color: #000;
+                    text-align: center;
+                    &--active {
+                        background-color: $red;
+                        color: #000;
+                    }
+                    span {
+                        font-family: 'JosefinSans-Regular';
+                        font-size: 1.5em;
+                        flex-basis: 50%;
+                    }
+                    .icon-1,
+                    .icon-2,
+                    .icon-3,
+                    .icon-4,
+                    .icon-5,
+                    .icon-6 {
+                        //flex-basis: 100%;
+                        width: 50px;
+                        height: 50px;
+                        text-align: center;
+                        // font-size: 50px;
+                        margin: 0 auto;
+                        margin-top: 30px;
+                    }
+                }
+            }
+            .content {
+                flex-basis: 20%;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                padding-bottom: 50px;
+                &__item {
+                    display: flex;
+                    flex-direction: column;
+                    &__head {
+                        flex-basis: 100%;
+                        background-color: #FFF;
+                        border-radius: 50px 50px 0 0;
+                        border-bottom: 1px solid #000;
+                        h3 {
+                            font-size: 3.0625rem;
+                            line-height: 5.59375rem;
+                            text-align: initial;
+                            text-align: center;
+                            margin-top: 30px;
+                            //margin-left: 5%;
+                            text-transform: uppercase;
+                        }
+                        p {
+                            padding-bottom: 50px;
+                            width: 80%;
+                            margin: 1em auto 1em;
+                        }
+                    }
+                    &__content {
+                        //border-top: 5px solid #fff;
+                        flex-basis: 100%;
+                        background-color: #fff;
+                        border-radius: 0 0 50px 50px;
+                        position: relative;
+                        padding-bottom: 100px;
+                        p {
+                            max-width: 700px;
+                            margin: 2em auto 2em 40%;
+                        }
+                        img {
+                            width: 30%;
+                            display: inline-flex;
+                            position: absolute;
+                            top: 3.5em;
+                            left: 5%;
+                        }
+                        .btn {
+                            color: #000;
+                            font-family: 'JosefinSans-Regular';
+                            @include button(1.5em 14%, #000, $yellow, 5px);
+                            //width: 2%;
+                            text-transform: uppercase;
+                            margin-left: 0;
+                            //margin-top: $spacing-unit;
+                            display: inline-block;
+                            letter-spacing: 1px;
+                            position: absolute;
+                            top: 26em;
+                            left: 5%;
+                            margin-top: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    .widget {
+        .container {
+            .head {}
+            .content {
+                &__item {
+                    &__head {}
+                    &__content {
+                        //border-top: 5px solid #fff;
+                        flex-basis: 100%;
+                        background-color: #fff;
+                        border-radius: 0 0 50px 50px;
+                        position: relative;
+                        padding-bottom: 100px;
+                        display: flex;
+                        flex-direction: column;
+                        p {
+                            max-width: 700px;
+                            margin: 2em 5% 2em 20%;
+                        }
+                        img {
+                            width: 50%;
+                            position: inherit;
+                            margin: 5em 0 0 20%;
+                            top: 0;
+                            left: 0;
+                        }
+                        .btn {
+                            color: #000;
+                            font-family: 'JosefinSans-Regular';
+                            @include button(1.5em 24%, #000, $yellow, 5px);
+                            //width: 2%;
+                            text-transform: uppercase;
+                            margin-left: 0;
+                            //margin-top: $spacing-unit;
+                            display: inline-block;
+                            letter-spacing: 1px;
+                            position: inherit;
+                            top: 0;
+                            left: 0;
+                            margin: 4em auto 0 20%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
