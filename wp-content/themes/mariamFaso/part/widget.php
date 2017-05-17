@@ -114,6 +114,6 @@
                         </div>
                     </div>
                 </div>
-                <script src="<?= dw_asset('js/jquery-3.2.0.min.js');?>"></script>
+<script src="<?= dw_asset('js/jquery-3.2.0.min.js');?>"></script>
 <script src="<?= dw_asset('js/widget.js');?>"></script>
         </section>
